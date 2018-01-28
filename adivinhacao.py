@@ -10,7 +10,7 @@ ganhou = False
 
 while (rodada <= tota_de_tentativas and not(ganhou) ):
 
-    print("Tentaiva", rodada, "de", tota_de_tentativas)
+    print("Tentaiva {} de {}".format(rodada, tota_de_tentativas))
     chute_str = input("Digite um número: ")
 
     print("Você digitou: ", chute_str)
