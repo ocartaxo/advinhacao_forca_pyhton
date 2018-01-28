@@ -1,6 +1,6 @@
-print("*********************************")
-print("Bem vindo ao jogo de Adivinhação!")
-print("*********************************")
+print("***************************************")
+print("** Bem vindo ao jogo de Adivinhação! **")
+print("***************************************")
 
 numero_secreto = 42
 
@@ -14,3 +14,5 @@ if(chute == numero_secreto):
     print("Você acertou!")
 else:
     print("Você errou!")
+
+print("Fim de jogo!")
