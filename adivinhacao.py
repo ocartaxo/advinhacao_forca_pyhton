@@ -5,16 +5,13 @@ print("***************************************")
 numero_secreto = 42
 
 tota_de_tentativas = 3
-rodada = 1
 ganhou = False
 
-while (rodada <= tota_de_tentativas and not(ganhou) ):
+for rodada in range(1, tota_de_tentativas+1):
 
     print("Tentaiva {} de {}".format(rodada, tota_de_tentativas))
     chute_str = input("Digite um número: ")
-
     print("Você digitou: ", chute_str)
-
     chute = int(chute_str)
 
     acertou = chute == numero_secreto
@@ -29,7 +26,5 @@ while (rodada <= tota_de_tentativas and not(ganhou) ):
             print("O seu chute foi MAIOR que o número secreto.")
         elif (eh_menor):
             print("O seu chute foi MENOR que o número secreto.")
-
-    rodada += 1
 
 print("Fim de jogo!")
