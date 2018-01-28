@@ -4,10 +4,27 @@ print("***************************************")
 print("** Bem vindo ao jogo de Adivinhação! **")
 print("***************************************")
 
-numero_secreto = round(random.randrange(1, 101) * 100) # 1 >= numero_secreto <= 100
-tota_de_tentativas = 3
+numero_secreto = round(random.randrange(1, 101)) # 1 >= numero_secreto <= 100
+tota_de_tentativas = 0
 
-acertou = False
+print("Qual o nível de dificuldade?")
+print("(1) Fácil  (2) Médio  (3) Difícil")
+dificuldade_valida = False
+
+while(not dificuldade_valida):
+    nivel = int(input("Defina a dificuldade: "))
+
+    if (nivel == 1):
+        tota_de_tentativas = 20
+        dificuldade_valida = True
+    elif (nivel == 2):
+        tota_de_tentativas = 10
+        dificuldade_valida = True
+    elif (nivel == 3):
+        tota_de_tentativas = 5
+        dificuldade_valida = True
+    else:
+        print("Por favor, insira um nível de dificuldade válido.")
 
 for rodada in range(1, tota_de_tentativas+1):
 
@@ -34,9 +51,5 @@ for rodada in range(1, tota_de_tentativas+1):
         elif (eh_menor):
             print("O seu chute foi MENOR que o número secreto.")
 
-if(not acertou):
-    print("Você perdeu, que pena. O número secreto era {}.".format(numero_secreto))
-else:
-    print("Você venceu, muito bem!!")
 
 print("Fim de jogo!")
