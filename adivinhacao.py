@@ -12,7 +12,7 @@ chute = int(chute_str)
 
 acertou  = chute == numero_secreto
 eh_maior = chute > numero_secreto
-eh_meor  = chute < numero_secreto
+eh_menor  = chute < numero_secreto
 
 if(acertou):
     print("Você acertou!")
