@@ -22,13 +22,13 @@ while (rodada <= tota_de_tentativas and not(ganhou) ):
     eh_menor = chute < numero_secreto
 
     if (acertou):
-        print("Você acertou!")
+        print("Parabéns! Você acertou!")
         gahou = True
     else:
         if (eh_maior):
-            print("Você errou! O seu chute é maior que o número secreto.")
+            print("O seu chute foi MAIOR que o número secreto.")
         elif (eh_menor):
-            print("Você errou! O seu chute é menor que o número secreto.")
+            print("O seu chute foi MENOR que o número secreto.")
 
     rodada += 1
 
