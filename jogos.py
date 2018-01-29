@@ -14,10 +14,10 @@ escolha = int(input("Escolha o seu jogo: "))
 if(escolha == 1):
     print("Jogo da Adivinhação escolhido.")
     print("Carregando...")
-    time.sleep(3)
+    time.sleep(2)
     adivinhacao.jogar()
 elif(escolha == 2):
     print("Jogo da Forca escolhido")
     print("Carregando...")
-    time.sleep(3)
+    time.sleep(2)
     forca.jogar()
