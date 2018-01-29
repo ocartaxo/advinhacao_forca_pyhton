@@ -2,9 +2,9 @@ import adivinhacao
 import forca
 import time
 
-print("**************************")
-print("*** Escolha o seu jogo ***")
-print("**************************")
+print("*********************")
+print("*** Menu de jogos ***")
+print("*********************")
 
 print("(1) Adivinhação  (2) Forca")
 
