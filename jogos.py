@@ -6,6 +6,7 @@ print("*********************")
 print("*** Menu de jogos ***")
 print("*********************")
 
+print("\nJogos disponíveis.:")
 print("(1) Adivinhação  (2) Forca")
 
 escolha = int(input("Escolha o seu jogo: "))
