@@ -21,3 +21,5 @@ elif(escolha == 2):
     print("Carregando...")
     time.sleep(2)
     forca.jogar()
+else:
+    print("Digite uma escolha inválida")
