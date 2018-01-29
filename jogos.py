@@ -8,7 +8,7 @@ print("**************************")
 
 print("(1) Adivinhação  (2) Forca")
 
-escolha = int(input("Digite o número corrsponde ao jogo: "))
+escolha = int(input("Escolha o seu jogo: "))
 
 if(escolha == 1):
     print("Jogo da Adivinhação escolhido.")
