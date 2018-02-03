@@ -12,13 +12,12 @@ def jogar():
     while(not enforcou and not acertou):
 
         chute = input("Chute uma letra: ")
+        chute = chute.strip()
 
         index = 0
         for letra in palavra_secreta:
-
-            if chute == letra:
+            if (chute == letra):
                 print("Encontrei a letra {} na posição {}".format(chute, index))
-
             index = index + 1
 
 
