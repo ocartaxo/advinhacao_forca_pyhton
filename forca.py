@@ -1,5 +1,5 @@
-
 def jogar():
+    #Mensagem de início
     print("***********************************")
     print("*** Bem vindo ao jogo da Forca! ***")
     print("***********************************")
@@ -36,8 +36,6 @@ def jogar():
         print("Parabéns, você ganhou!!")
     else:
         print("Parabéns, você perdeu!!")
-
-
 
     print("Fim de jogo!")
 
