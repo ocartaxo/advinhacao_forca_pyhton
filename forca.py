@@ -10,6 +10,7 @@ def jogar():
 
     enforcou = False
     acertou  = False
+    erros = 0
 
     print(palavras_acertadas)
 
@@ -17,13 +18,14 @@ def jogar():
 
         chute = input("Chute uma letra: ")
         chute = chute.strip()
-
-        index = 0
-        for letra in palavra_secreta:
-            if (chute.upper() == letra.upper()):
-                palavras_acertadas[index] = letra
-            index = index + 1
-
+        if(chute in palavra_secreta):
+            index = 0
+            for letra in palavra_secreta:
+                if (chute.upper() == letra.upper()):
+                    palavras_acertadas[index] = letra
+                index = index + 1
+        else:
+            erros += 1
         print(palavras_acertadas)
 
 
