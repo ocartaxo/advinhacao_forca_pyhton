@@ -27,9 +27,12 @@ def jogar():
                 index += 1
         else:
             erros += 1
+
+        enforcou = erros == 6
+        acertou = "_" not in palavras_acertadas
         print(palavras_acertadas)
 
-    enforcou = erros == 6
+
     print("Fim de jogo!")
 
 if(__name__ == "__main__"):
