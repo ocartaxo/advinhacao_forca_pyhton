@@ -32,6 +32,12 @@ def jogar():
         acertou = "_" not in palavras_acertadas
         print(palavras_acertadas)
 
+    if(acertou):
+        print("Parabéns, você ganhou!!")
+    else:
+        print("Parabéns, você perdeu!!")
+
+
 
     print("Fim de jogo!")
 
