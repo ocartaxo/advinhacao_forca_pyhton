@@ -28,7 +28,7 @@ def jogar():
             erros += 1
         print(palavras_acertadas)
 
-
+    enforcou = erros == 6
     print("Fim de jogo!")
 
 if(__name__ == "__main__"):
