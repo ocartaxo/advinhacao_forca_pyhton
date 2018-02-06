@@ -1,10 +1,24 @@
+import random
+
 def jogar():
     #Mensagem de início
     print("***********************************")
     print("*** Bem vindo ao jogo da Forca! ***")
     print("***********************************")
 
-    palavra_secreta = "banana".upper()
+    arquivo = open("palavras.txt", 'r')
+    frutas = []
+
+    for linha in arquivo:
+        linha = linha.strip()
+        frutas.append(linha)
+
+    arquivo.close()
+
+    numero = random.randrange(0, len(frutas))
+
+
+    palavra_secreta = frutas[numero].upper()
     letras_acertadas = ["_" for letra in palavra_secreta] # Compreensão de lista (List Comprehension)
 
     enforcou = False
