@@ -1,7 +1,5 @@
 import random
 
-import random
-
 def jogar():
 
     imprime_mensagem_abertura()
@@ -9,6 +7,7 @@ def jogar():
 
     letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
     print(letras_acertadas)
+    print(palavra_secreta)
 
     enforcou = False
     acertou = False
@@ -22,8 +21,9 @@ def jogar():
             marca_chute_correto(chute, letras_acertadas, palavra_secreta)
         else:
             erros += 1
+            desenha_forca(erros)
 
-        enforcou = erros == 6
+        enforcou = erros == 7
         acertou = "_" not in letras_acertadas
         print(letras_acertadas)
 
@@ -32,6 +32,88 @@ def jogar():
     else:
         imprime_de_derrota(palavra_secreta)
 
+def imprime_mensagem_abertura():
+    # Mensagem de início
+    print("***********************************")
+    print("*** Bem vindo ao jogo da Forca! ***")
+    print("***********************************")
+
+def carrega_palavra_secreta():
+    frutas = []
+    with open("palavras.txt", "r") as arquivo:
+        for linha in arquivo:
+            linha = linha.strip()
+            frutas.append(linha)
+
+    numero = random.randrange(0, len(frutas))
+
+    palavra_secreta = frutas[numero].upper()
+    return palavra_secreta
+
+def inicializa_letras_acertadas(palavra):
+    return ["_" for letra in palavra]  # Compreensão de lista (List Comprehension)
+
+def pede_chute():
+    chute = input("Chute uma letra: ")
+    chute = chute.strip().upper()
+    return chute
+
+def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
+    index = 0
+    for letra in palavra_secreta:
+        if (chute == letra):
+            letras_acertadas[index] = letra
+        index += 1
+
+def desenha_forca(erros):
+    print("  _______     ")
+    print(" |/      |    ")
+
+    if(erros == 1):
+        print(" |      (_)   ")
+        print(" |            ")
+        print(" |            ")
+        print(" |            ")
+
+    if(erros == 2):
+        print(" |      (_)   ")
+        print(" |      \     ")
+        print(" |            ")
+        print(" |            ")
+
+    if(erros == 3):
+        print(" |      (_)   ")
+        print(" |      \|    ")
+        print(" |            ")
+        print(" |            ")
+
+    if(erros == 4):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |            ")
+        print(" |            ")
+
+    if(erros == 5):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |            ")
+
+    if(erros == 6):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |      /     ")
+
+    if (erros == 7):
+        print(" |      (_)   ")
+        print(" |      \|/   ")
+        print(" |       |    ")
+        print(" |      / \   ")
+
+    print(" |            ")
+    print("_|___         ")
+    print()
 
 def imprime_de_vitoria():
 
@@ -66,41 +148,7 @@ def imprime_de_derrota(palavra_secreta):
     print("   |  I I I I I I  |        ")
     print("   \_             _/       ")
     print("     \_         _/         ")
-    print("       \_______/           "
-
-def imprime_mensagem_abertura():
-    # Mensagem de início
-    print("***********************************")
-    print("*** Bem vindo ao jogo da Forca! ***")
-    print("***********************************")
-
-def marca_chute_correto(chute, palavra_secreta, letras_acertadas):
-    index = 0
-    for letra in palavra_secreta:
-        if (chute.upper() == letra.upper()):
-            letras_acertadas[index] = letra
-        index += 1
-
-def pede_chute():
-    chute = input("Chute uma letra: ")
-    chute = chute.strip().upper()
-    return chute
-
-def carrega_palavra_secreta():
-    frutas = []
-    with open("palavras.txt", "r") as arquivo:
-        for linha in arquivo:
-            linha = linha.strip()
-            frutas.append(linha)
-
-    numero = random.randrange(0, len(frutas))
-
-    palavra_secreta = frutas[numero].upper()
-    return palavra_secreta
-
-
-def inicializa_letras_acertadas(palavra):
-    return ["_" for letra in palavra]  # Compreensão de lista (List Comprehension)
+    print("       \_______/           ")
 
 
 if(__name__ == "__main__"):
