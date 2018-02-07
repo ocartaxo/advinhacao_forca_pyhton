@@ -1,11 +1,11 @@
 banana
-maçã
+maça
 uva
 melancia
 laranja
 morango
 abacaxi
 manga
-pêra
-mamão
-limão
+pera
+mamao
+limao
