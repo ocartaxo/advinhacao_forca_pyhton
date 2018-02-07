@@ -7,7 +7,6 @@ def jogar():
 
     letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
     print(letras_acertadas)
-    print(palavra_secreta)
 
     enforcou = False
     acertou = False
