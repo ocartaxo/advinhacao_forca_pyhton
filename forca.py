@@ -37,9 +37,9 @@ def imprime_mensagem_abertura():
     print("*** Bem vindo ao jogo da Forca! ***")
     print("***********************************")
 
-def carrega_palavra_secreta():
+def carrega_palavra_secreta(nome_arquivo="palavras.txt"):
     frutas = []
-    with open("palavras.txt", "r") as arquivo:
+    with open(nome_arquivo, "r") as arquivo:
         for linha in arquivo:
             linha = linha.strip()
             frutas.append(linha)
